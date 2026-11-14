@@ -1,0 +1,32 @@
+# AgentGuard policy: the rules every tool call must pass.
+# Change these values and re-run the tests to see what happens.
+
+allowed_tools:
+  - run_python
+  - read_file
+
+# The only folder the agent is allowed to read files from
+workspace_folder: workspace
+
+sandbox:
+  image: python:3.12-slim
+  timeout_seconds: 5        # kill code that runs longer than this
+  memory_limit: 256m        # max RAM for the container
+  cpu_limit: 0.5            # half of one CPU core
+  max_processes: 64         # stops fork bombs / thread floods
+  max_output_chars: 5000    # cut off giant outputs
+
+max_code_length: 5000
+
+# Code containing any of these is blocked BEFORE it reaches the sandbox.
+# Note: a word blocklist is easy to trick. The sandbox is the real wall.
+blocked_code_patterns:
+  - os.system
+  - subprocess
+  - shutil.rmtree
+  - __import__
+  - importlib
+  - eval(
+  - exec(
+  - socket
+  - ctypes

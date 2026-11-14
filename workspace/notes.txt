@@ -1,0 +1,4 @@
+Project meeting notes
+- Ship version 1 by Friday
+- Maria owns the dashboard, Dev owns the API
+- Next meeting: Tuesday 3pm
