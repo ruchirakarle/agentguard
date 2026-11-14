@@ -20,6 +20,10 @@ The pattern blocklist is intentionally treated as a weak first filter; the conta
 
 ## Results
 
+
+<img width="1182" height="813" alt="projectagentai" src="https://github.com/user-attachments/assets/2eeab385-30ef-4308-9338-70799f4c9fd5" />
+
+
 | Attack category | Tests | Blocked by |
 |---|---|---|
 | Escape the workspace (path traversal, absolute paths) | 3 | Policy |
