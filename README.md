@@ -1,4 +1,5 @@
 # AgentGuard 🛡️
+![Attack tests](https://github.com/ruchirakarle/agentguard/actions/workflows/tests.yml/badge.svg)
 
 **A secure sandbox and red-team test suite for AI agents.**
 AgentGuard lets an LLM agent run code and read files, but every action passes through a policy check, runs inside a locked-down Docker container, and is logged. A suite of attack tests proves the guardrails hold even when the model is tricked.
